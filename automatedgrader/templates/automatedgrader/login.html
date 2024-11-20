@@ -1,0 +1,23 @@
+{% extends "automatedgrader/layout.html" %}
+{% load static %}
+{% block body %}
+ <section class="form-container">
+    <form action="{% url 'login' %}" method="post" enctype="multipart/form-data">
+       <h3>login now</h3>
+       {% csrf_token %}
+       <p>Username: <span>*</span></p>
+       <input type="text" name="username" placeholder="enter your username" required maxlength="50" class="box">
+       <p>your password <span>*</span></p>
+
+       <input type="password" name="password" placeholder="enter your password" required maxlength="20" class="box">
+       {{ message }}
+       <input type="submit" value="login" name="submit" class="btn">
+       <h1>Don't have an account? <a href="{% url 'register' %}">Register here.</a></h1>
+    </form>
+ </section>
+ {% endblock %}
+
+{% block script %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "automatedgrader/layout.html" %}
+{% load static %}
+{% block body %}
+ 
+ <section class="home-grid">
+ 
+    <h1 class="heading">Contact Us</h1>
+ 
+    <div class="box-container">
+    
+       
+            <h3 class="title">Mobile Number:123456789</h3>
+            <p class="likes">Availiable at any time</p>
+            <h2>email:automatedgrader@gmail.com</h2>
+ 
+    </div>
+    <div>
+        <img src = "/images/sched.jpg">
+    </div>
+ 
+ </section>
+ {% endblock %}
+
+{% block script %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<script src="{% static 'automatedgrader/js/index.js' %}" ></script>
+{% endblock %}

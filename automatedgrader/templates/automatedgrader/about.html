@@ -1,0 +1,43 @@
+{% extends "automatedgrader/layout.html" %}
+{% load static %}
+{% block body %}
+ 
+ <section class="home-grid">
+ 
+    <h1 class="heading">Essay Grading Made Easier</h1>
+ 
+    <div class="box-container" style="display: block; p {
+        font-size: x-large;
+    }">
+    
+        
+            <h3 class="likes">Automated Grading</p>
+            <h3 class="likes">Upload your essay and get it graded instantly</h3> 
+            <br>
+            <h2>An automated essay grading system employing Bidirectional Long Short-Term Memory (BiLSTM) integrates natural language processing and deep learning. It preprocesses essays, extracts features, and employs a BiLSTM model trained on a dataset of graded essays.<br> During training, the model learns to map essay features to grades. Post-training, it predicts grades for new essays.<br> Challenges include data quality, bias mitigation, and interpretability. Benefits encompass efficient, scalable grading processes with consistent feedback for students and reduced workload for educators. Such systems find applications in education and standardized testing, facilitating fast, reliable assessment.<br>
+                An automated essay grading system leveraging Bidirectional Long Short-Term Memory (BiLSTM) technology amalgamates advanced natural language processing (NLP) techniques with deep learning methodologies. The system commences with preprocessing raw essay texts to eliminate noise and tokenize words, followed by the extraction of various features such as word embeddings, syntactic and semantic features, and structural characteristics. These features serve as the input for the BiLSTM model, which is the core component of the grading system. Unlike traditional RNNs, BiLSTM processes input sequences bidirectionally, capturing dependencies both forward and backward, enabling it to effectively discern long-range dependencies within the essays.<br> The training process necessitates a substantial dataset comprising essays with corresponding human-assigned grades, which is divided into training, validation, and test sets.<br> During training, the BiLSTM model learns to map the extracted features of essays to their respective grades through iterative backpropagation and optimization algorithms such as Adam or RMSprop.<br> 
+
+Once trained, the BiLSTM model can predict grades for unseen essays by taking the preprocessed essay text as input, extracting features, and generating predictions. Performance evaluation metrics such as accuracy, precision, recall, and F1-score are employed to assess the system's effectiveness.<br> Further refinement may involve fine-tuning and optimization techniques like hyperparameter tuning, ensembling, or incorporating additional features to enhance the model's accuracy and robustness. Challenges in the development and deployment of such systems include ensuring the quality and diversity of the training data, mitigating biases in the grading process, and addressing concerns regarding interpretability and transparency.<br>
+
+Despite these challenges, automated essay grading systems using BiLSTM offer numerous benefits. They streamline the grading process, providing fast and consistent feedback to students while reducing the workload for educators.<br> Additionally, they enable scalable assessment processes, facilitating efficient evaluation in large-scale educational settings and standardized testing scenarios. Moreover, these systems find applications beyond traditional education, including language assessment and proficiency testing in various professional domains. <br>By leveraging cutting-edge NLP and deep learning technologies, automated essay grading systems contribute to advancing educational assessment methodologies, fostering fair and reliable evaluation practices, and enhancing learning outcomes for students worldwide.
+
+
+
+
+
+            </h2>
+        
+
+ 
+    </div>
+    <div>
+        <img src = "/images/sched.jpg">
+    </div>
+ 
+ </section>
+ {% endblock %}
+
+{% block script %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<script src="{% static 'automatedgrader/js/index.js' %}" ></script>
+{% endblock %}

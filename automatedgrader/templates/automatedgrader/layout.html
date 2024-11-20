@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AES</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-1.png' %}">
+   
+    <link href="{% static 'automatedgrader/css/styles.css' %}" rel="stylesheet">
+    <script src="{% static 'automatedgrader/js/index.js' %}" ></script>
+    {% block script %}
+    {% endblock %}
+</head>
+<body>
+    <header class="header"> 
+        <section class="flex">
+           <a href="{% url 'index' %}" class="logo">AES</a>
+    
+        </section>
+     
+     </header>   
+     
+     <div class="side-bar">
+    
+        <div id="close-btn">
+           <i class="fas fa-times"></i>
+        </div>
+         <nav class="navbar">
+           <a href="{% url 'index' %}"><i class="fas fa-home"></i><span>home</span></a>
+           <a href="{% url 'about' %}"><i class="fas fa-question"></i><span>about</span></a>
+           
+           {% if user.is_authenticated %}
+           <a href="{% url 'Account' %}"><i class="fas fa-user"></i><span>Profile</span></a>
+           {% endif %}
+        </nav>
+     
+     </div>
+    {% block body %} 
+    {% endblock %}
+</body>
+</html>

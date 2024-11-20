@@ -1,0 +1,31 @@
+{% extends "automatedgrader/layout.html" %}
+{% load static %}
+{% block body %}
+ 
+ <section class="home-grid">
+ 
+    <h1 class="heading">FACULTY</h1>
+ 
+    <div class="box-container">
+    
+        <div class="box">
+            <h3 class="title">Automated Grading</h3>
+            <p class="likes">Upload your essay and get it graded instantly</p>
+            <p>An automated essay grading system is a software tool designed to evaluate and score essays written by students without the need for human intervention. These systems utilize various techniques from natural language processing (NLP), machine learning, and artificial intelligence (AI) to analyze and assess essays based on predefined criteria such as grammar, spelling, coherence, organization, argumentation, and relevance to the given topic
+
+            </p>
+        </div>
+
+ 
+    </div>
+    <div>
+        <img src = "/images/sched.jpg">
+    </div>
+ 
+ </section>
+ {% endblock %}
+
+{% block script %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<script src="{% static 'automatedgrader/js/index.js' %}" ></script>
+{% endblock %}

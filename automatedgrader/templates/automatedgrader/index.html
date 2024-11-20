@@ -1,0 +1,26 @@
+{% extends "automatedgrader/layout.html" %}
+{% load static %}
+{% block body %}
+<section class="form-container">
+
+   <form action="" method="post" enctype="multipart/form-data" id="inputform">
+      <h3>Essay Input </h3>
+      {% csrf_token %}
+      <p>Essay: <span>*</span></p>
+      <textarea name="essay" id="essay" cols="30" rows="10"  style ="border-style: solid; width: 69rem;"></textarea>
+      <p>or</p>
+      <p>Upload Your Essay File Here: <span>*</span></p>
+      <br>
+      <input type="file" name="file" id="file" accept=".txt">
+      {{ message }}
+      <input type="submit" value="submit" name="submit" class="btn" >
+      
+   </form>
+</section>
+<div id="show"  style="display: none; padding-left: 25%; "></div>
+ {% endblock %}
+
+{% block script %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+<script src="{% static 'automatedgrader/js/index.js' %}"  defer></script>
+{% endblock %}
